@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления</title>
+    <link rel="stylesheet" href="/dashboard/dashboard.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <h1 class="title">Добро пожаловать в панель управления!</h1>
+
+    <div class="icon-container">
+        <div class="icon">
+            <a th:href="@{/products/product_dashboard}">
+                <img src="/images/Product.png" alt="Продукты">
+                <p>Продукты</p>
+            </a>
+        </div>
+        <div class="icon">
+            <a th:href="@{/orders/order_dashboard}">
+                <img src="/images/Order.png" alt="Заказы">
+                <p>Заказы</p>
+            </a>
+        </div>
+        <div class="icon">
+            <a th:href="@{/about}">
+                <img src="/images/Profile.png" alt="Автор">
+                <p>Автор</p>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

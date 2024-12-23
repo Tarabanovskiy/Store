@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/auth/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="screen">
+        <div class="screen__content">
+            <form class="login" th:action="@{/register}" method="post">
+                <div class="login__field">
+                    <i class="login__icon fas fa-user"></i>
+                    <input type="text" class="login__input" placeholder="Имя пользователя" name="username" required>
+                </div>
+                <div class="login__field">
+                    <i class="login__icon fas fa-id-card"></i>
+                    <input type="text" class="login__input" placeholder="ФИО" name="fullName" required>
+                </div>
+                <div class="login__field">
+                    <i class="login__icon fas fa-lock"></i>
+                    <input type="password" class="login__input" placeholder="Пароль" name="password" required>
+                </div>
+                <div class="login__field">
+                    <i class="login__icon fas fa-briefcase"></i>
+                    <select class="login__input" name="role" required>
+                        <option value="ADMIN">Администратор</option>
+                        <option value="CUSTOMER">Клиент</option>
+                        <option value="MANAGER">Менеджер</option>
+                    </select>
+                </div>
+                <button class="button login__submit" type="submit">
+                    <span class="button__text">Зарегистрироваться</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button>
+            </form>
+            <a href="/login" class="button register__submit">
+                <span class="button__text">Уже есть аккаунт? Войти</span>
+                <i class="button__icon fas fa-chevron-right"></i>
+            </a>
+            <div th:if="${error}">
+                <p th:text="${error}" style="color: red;"></p>
+            </div>
+            <div th:if="${success}">
+                <p th:text="${success}" style="color: green;"></p>
+            </div>
+        </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

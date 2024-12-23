@@ -1,0 +1,4 @@
+com\store\client\ClientApplication.class
+com\store\client\controller\AuthController.class
+com\store\client\model\User$UserBuilder.class
+com\store\client\model\User.class

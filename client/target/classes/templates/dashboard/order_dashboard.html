@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказы</title>
+  <link rel="stylesheet" href="/dashboard/orders-style.css">
+</head>
+<body>
+<div class="dashboard-container">
+  <h1 class="title">Добро пожаловать в панель управления заказами!</h1>
+  <div class="icon-container">
+    <div class="icon">
+      <a th:href="@{/orders/list}">
+        <img src="/images/list.png" alt="Список заказов">
+        <p>Список заказов</p>
+      </a>
+    </div>
+    <div class="icon">
+      <a th:href="@{/orders/add}">
+        <img src="/images/add.png" alt="Добавить заказ">
+        <p>Добавить заказ</p>
+      </a>
+    </div>
+    <div class="icon">
+      <a href="/dashboard/main_dashboard">
+        <img src="/images/back.png" alt="Назад">
+        <p>Назад</p>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

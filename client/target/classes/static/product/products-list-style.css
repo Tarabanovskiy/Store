@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    color: #D35400;
+    margin-bottom: 20px;
+}
+
+.actions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn {
+    background-color: #27AE60;
+}
+
+.add-btn:hover {
+    background-color: #229954;
+}
+
+.back-btn {
+    background-color: #3498DB;
+}
+
+.back-btn:hover {
+    background-color: #2E86C1;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.products-table th, .products-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.products-table th {
+    background-color: #F39C12;
+    color: #fff;
+}
+
+.products-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.products-table tbody tr:hover {
+    background-color: #FFE9D6;
+}
+
+.edit-btn {
+    background-color: #3498DB;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #2E86C1;
+}
+
+.delete-btn {
+    background-color: #E74C3C;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #C0392B;
+}
