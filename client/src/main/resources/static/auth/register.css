@@ -1,0 +1,220 @@
+/* Подключение шрифта Raleway с весами 400 и 700 */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+/* Устанавливаем box-sizing, убираем отступы и поля, а также задаем шрифт для всех элементов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
+
+/* Фон страницы с градиентом от фиолетового к синему */
+body {
+    background: linear-gradient(90deg, #C7C5F4, #776BCC);
+}
+
+/* Контейнер для центрирования содержимого страницы */
+.container {
+    display: flex;
+    align-items: center;  /* Выравнивание по вертикали */
+    justify-content: center;  /* Выравнивание по горизонтали */
+    min-height: 100vh;  /* Минимальная высота контейнера — 100% высоты экрана */
+}
+
+/* Стили для основной области экрана */
+.screen {
+    background: linear-gradient(90deg, #5D54A4, #7C78B8);  /* Градиент фона */
+    position: relative;  /* Позиционирование для добавления фона */
+    height: 700px;  /* Высота экрана */
+    width: 360px;  /* Ширина экрана */
+    box-shadow: 0px 0px 24px #5C5696;  /* Тень для экрана */
+}
+
+/* Содержимое экрана */
+.screen__content {
+    z-index: 1;  /* Слой содержимого выше фона */
+    position: relative;
+    height: 100%;  /* Высота 100% */
+    padding-top: -50px;  /* Поднятие содержимого */
+}
+
+/* Фон экрана с абсолютным позиционированием */
+.screen__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;  /* Фон находится на заднем плане */
+    -webkit-clip-path: inset(0 0 0 0);  /* Для старых браузеров */
+    clip-path: inset(0 0 0 0);  /* Обрезка фона */
+}
+
+/* Стиль для фонов в виде вращающихся фигур */
+.screen__background__shape {
+    transform: rotate(45deg);  /* Вращаем фигуры на 45 градусов */
+    position: absolute;
+}
+
+/* Первая фигура фона */
+.screen__background__shape1 {
+    height: 520px;
+    width: 520px;
+    background: #FFF;  /* Белый цвет */
+    top: -50px;
+    right: 120px;
+    border-radius: 0 72px 0 0;  /* Скругление углов */
+}
+
+/* Вторая фигура фона */
+.screen__background__shape2 {
+    height: 220px;
+    width: 220px;
+    background: #6C63AC;  /* Темно-синий цвет */
+    top: -172px;
+    right: 0;
+    border-radius: 32px;  /* Скругление углов */
+}
+
+/* Третья фигура фона с линейным градиентом */
+.screen__background__shape3 {
+    height: 540px;
+    width: 190px;
+    background: linear-gradient(270deg, #5D54A4, #6A679E);  /* Градиентный фон */
+    top: -24px;
+    right: 0;
+    border-radius: 32px;
+}
+
+/* Четвертая фигура фона */
+.screen__background__shape4 {
+    height: 400px;
+    width: 200px;
+    background: #7E7BB9;  /* Светло-синий цвет */
+    top: 420px;
+    right: 50px;
+    border-radius: 60px;  /* Скругление углов */
+}
+
+/* Контейнер для формы логина */
+.login {
+    width: 320px;
+    padding: 30px;
+    padding-top: 156px;  /* Отступ сверху для позиционирования формы */
+}
+
+/* Стили для каждого поля ввода */
+.login__field {
+    padding: 20px 0px;
+    position: relative;
+}
+
+/* Иконка в поле ввода */
+.login__icon {
+    position: absolute;
+    top: 30px;
+    color: #7875B5;  /* Цвет иконки */
+}
+
+/* Стили для поля ввода */
+.login__input {
+    border: none;
+    border-bottom: 2px solid #D1D1D4;  /* Нижняя граница поля */
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    width: 75%;
+    transition: .2s;  /* Плавный переход */
+}
+
+/* Эффекты при фокусе или наведении на поле ввода */
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+    outline: none;
+    border-bottom-color: #6A679E;  /* Изменение цвета границы */
+}
+
+/* Стили для кнопки входа */
+.login__submit {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;  /* Скругление углов */
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #4C489D;  /* Цвет текста */
+    box-shadow: 0px 2px 2px #5C5696;  /* Тень кнопки */
+    cursor: pointer;  /* Курсор при наведении */
+    transition: .2s;  /* Плавный переход */
+}
+
+/* Стили для кнопки регистрации */
+.register__submit {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 1px;
+    margin-left: 30px;  /* Сдвиг кнопки вправо */
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    color: #4C489D;  /* Цвет текста */
+    box-shadow: 0px 2px 2px #5C5696;
+    cursor: pointer;  /* Курсор при наведении */
+    transition: .2s;  /* Плавный переход */
+}
+
+/* Эффект при наведении на кнопку регистрации */
+.register__submit:hover {
+    background-color: #f0f0f0;
+}
+
+/* Иконка на кнопке */
+.button__icon {
+    font-size: 24px;
+    margin-left: auto;
+    color: #7875B5;
+}
+
+/* Социальные иконки для авторизации */
+.social-login {
+    position: absolute;
+    height: 140px;
+    width: 160px;
+    text-align: center;
+    bottom: 0px;
+    right: 0px;
+    color: #fff;
+}
+
+/* Контейнер для иконок социальных сетей */
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для социальных иконок */
+.social-login__icon {
+    padding: 20px 10px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0px 0px 8px #7875B5;  /* Тень для текста */
+}
+
+/* Эффект при наведении на иконки */
+.social-login__icon:hover {
+    transform: scale(1.5);  /* Увеличение размера при наведении */
+}

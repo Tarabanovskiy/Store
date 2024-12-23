@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить заказ</title>
+    <link rel="stylesheet" href="/order/add-order-style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Добавить заказ</h1>
+
+    <!-- Сообщение об ошибке -->
+    <div th:if="${error}" class="message error">
+        <p th:text="${error}"></p>
+    </div>
+
+    <!-- Сообщение об успехе -->
+    <div th:if="${success}" class="message success">
+        <p th:text="${success}"></p>
+    </div>
+
+    <!-- Форма добавления заказа -->
+    <form th:action="@{/orders/add}" method="post" class="form">
+        <div class="form-group">
+            <label for="productId">Продукт ID:</label>
+            <input type="number" id="productId" name="productId" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="orderDate">Дата заказа:</label>
+            <input type="date" id="orderDate" name="orderDate" required>
+        </div>
+
+        <div class="form-actions">
+            <button class="btn submit-btn" type="submit">Добавить заказ</button>
+            <a class="btn back-btn" href="/orders/list">Вернуться к списку заказов</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    color: #D35400;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.message.error {
+    background-color: #E74C3C;
+    color: #fff;
+}
+
+.message.success {
+    background-color: #27AE60;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="number"],
+input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus {
+    border-color: #3498DB;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #27AE60;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #229954;
+}
+
+.back-btn {
+    background-color: #3498DB;
+}
+
+.back-btn:hover {
+    background-color: #2E86C1;
+}
